@@ -1,0 +1,23 @@
+{% extends 'taycan/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+	<section style="border:2px solid #F00; padding-left:10px;">
+	<form method="">	
+		{% csrf_token %}
+		{{form1.as_p}}
+		<button type="submit"> Submit </button>
+	</form>
+	</section>
+
+	<section style="border:2px solid #0F0; margin-left:20px; padding-left:10px;">
+		<form method="">
+   		{% csrf_token %}
+    	{{form2.as_p}}
+	<button type="submit"> Submit </button>
+	</form>
+   	</section>
+</main>
+
+{% endblock content %}

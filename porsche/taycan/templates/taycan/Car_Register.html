@@ -1,0 +1,13 @@
+{% extends 'taycan/base.html' %}
+
+{% block content %}
+
+<form method="post">
+	{% csrf_token %}
+	<label for="chass_num"> Chassis Number : </label><input type="text" maxlength="20"  /><br /><br />
+	<label for="car_model">Car Model : </label><input type="text" maxlength="10" /><br /><br />
+	<label for="color">Color : </label><input type="text" maxlength="10" /><br /><br />
+	<button type="submit"> Register </button>
+</form>
+
+{% endblock content %}

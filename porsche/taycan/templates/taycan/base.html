@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> Porsche Taycan </title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href= "{% static 'taycan/home.css' %}" >
+</head>
+
+<body>
+<header>
+	<h1> Porsche Taycan </h1>
+	<h3> The Art of Electrifying the lococmotion </h3>
+</header>
+<nav>
+	<ul>
+    	<li> <a href="{% url 'taycan-home' %}"> Home </a></li>
+    	<li> <a href="{% url 'taycan-CR' %}"> Car Registration </a></li>
+    	<li> <a href="{% url 'taycan-OR' %}"> Owner Registration </a></li>
+        <li> <a href=""> About </a></li>
+    </ul>	
+</nav>
+
+{% if messages %}
+	{% for message in messages %}
+    	<div align="center" style="background-color:#9F0; border:2px solid black;"> {{message}} </div>
+    {% endfor %}
+{% endif %}
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
